@@ -5,9 +5,10 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: "/revolnix-landingpage/",
   build: {
-    outDir: mode === 'production' ? 'docs' : 'dist',
+    outDir: 'docs',
+    emptyOutDir: true,
   },
   server: {
     host: "::",
