@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      // Get the current path and redirect to the index.html with the path as a query parameter
-      const path = window.location.pathname + window.location.search;
-      window.location.href = '/revolnix-landingpage/index.html' + path;
+      // Remove any existing base path
+      const currentPath = window.location.pathname.replace(/^\/revolnix-landingpage/, '');
+      // Redirect to the root with the path
+      window.location.href = window.location.origin + currentPath + window.location.search;
     </script>
   </head>
   <body>
-    <p>Redirecting...</p>
+    <p>Redirecting to the correct page...</p>
   </body>
 </html>
