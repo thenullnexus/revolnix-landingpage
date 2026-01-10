@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Remove any existing base path
+      const currentPath = window.location.pathname.replace(/^\/revolnix-landingpage/, '');
+      // Redirect to the root with the path
+      window.location.href = window.location.origin + currentPath + window.location.search;
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to the correct page...</p>
+  </body>
+</html>
