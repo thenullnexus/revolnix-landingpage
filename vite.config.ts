@@ -10,6 +10,12 @@ export default defineConfig(({ mode }) => ({
     outDir: 'docs',
     emptyOutDir: true,
     assetsDir: './',
+    rollupOptions: {
+      output: {
+        assetFileNames: '[name]-[hash][extname]',
+        entryFileNames: '[name]-[hash].js',
+      },
+    },
   },
   server: {
     host: "::",
