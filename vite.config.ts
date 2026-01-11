@@ -5,17 +5,11 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/revolnix-landingpage/' : '/',
+  base: '/revolnix-landingpage/',
   build: {
     outDir: 'docs',
     emptyOutDir: true,
     assetsDir: './',
-    rollupOptions: {
-      output: {
-        assetFileNames: '[name]-[hash][extname]',
-        entryFileNames: '[name]-[hash].js',
-      },
-    },
   },
   server: {
     host: "::",
