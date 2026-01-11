@@ -4,26 +4,32 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
-  base: '/revolnix-landingpage/',
-  build: {
-    outDir: 'docs',
-    emptyOutDir: true,
-    assetsDir: './',
-  },
-  server: {
-    host: "::",
-    port: 8080,
-    historyApiFallback: true,
-  },
-  preview: {
-    port: 8080,
-    historyApiFallback: true,
-  },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
+export default defineConfig(({ mode }) => {
+  const isProduction = mode === 'production';
+  
+  return {
+    base: isProduction ? '/revolnix-landingpage/' : '/',
+    build: {
+      outDir: 'docs',
+      emptyOutDir: true,
+      assetsDir: './',
     },
-  },
-}));
+    server: {
+      host: "::",
+      port: 8080,
+      strictPort: true,
+    },
+    preview: {
+      port: 8080,
+    },
+    plugins: [
+      react(),
+      mode === "development" && componentTagger()
+    ].filter(Boolean),
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      },
+    },
+  };
+});

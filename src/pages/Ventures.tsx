@@ -56,9 +56,10 @@ const Ventures = () => {
               </h2>
               
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Stop404 delivers cutting-edge software solutions that ensure your digital presence 
-                never faces downtime. From custom development to system maintenance, we keep your 
-                business running 24/7.
+                Stop404 delivers cutting-edge software solutions that ensure your digital presence never faces downtime. 
+                From custom development to system maintenance, we keep your business running 24/7. 
+                Specializing in emerging technologies like AI, automation, and fintech innovations, 
+                we empower your business with future-ready solutions.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
@@ -67,7 +68,7 @@ const Ventures = () => {
                   { icon: Shield, label: "System Security" },
                   { icon: Zap, label: "High Performance" },
                   { icon: Globe, label: "Scalable Solutions" },
-                  { icon: Clock, label: "24/7 Support" },
+                  { icon: TrendingUp, label: "Unlimited Innovation" },
                   { icon: ArrowRight, label: "Quick Delivery" },
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -112,7 +113,7 @@ const Ventures = () => {
                   { icon: Lock, label: "Secure by Design" },
                   { icon: TrendingUp, label: "Future-Ready" },
                   { icon: Zap, label: "Lightning Fast" },
-                  { icon: Shield, label: "Bank-Grade Security" },
+                  { icon: Shield, label: "Investment Accelerator" },
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-2 text-sm text-gray-500">
                     <feature.icon className="w-4 h-4 text-blue-400" />

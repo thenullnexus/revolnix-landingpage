@@ -22,20 +22,20 @@ const HeroSection = () => {
 
       <div className="container relative z-10 mx-auto px-6 text-center">
         <div className="animate-slide-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">An Unique Revolution in Technology</span>
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight mb-6 animate-slide-up" style={{ animationDelay: '0.1s' }}>
-          <span className="text-foreground">REVOL</span>
-          <span className="text-gradient-primary">NIX</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 animate-slide-up font-medium" style={{ animationDelay: '0.2s' }}>
-          TECHNOLOGIES
-        </p>
+        <div className="animate-slide-up mb-8 mt-8" style={{ animationDelay: '0.1s' }}>
+          <h1 className="text-4xl md:text-6xl font-heading font-bold tracking-wide text-black mb-4">
+            TRANSFORMING BUSINESS
+          </h1>
+          <h2 className="text-4xl md:text-6xl font-heading font-bold tracking-wide text-brand-purple">
+            THROUGH A UNIQUE REVOLUTION
+          </h2>
+        </div>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
           Pioneering the future through innovative software solutions and fintech ventures. 

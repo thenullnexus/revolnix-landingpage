@@ -94,8 +94,8 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-card rounded-2xl border border-border p-8 shadow-card hover:shadow-elevated transition-all duration-300 hover:-translate-y-1">
-              <div className="flex items-center gap-4 mb-4">
-                <img src={logoStop404} alt="Stop404" className="h-12 w-auto" />
+              <div className="mb-4">
+                <img src={logoStop404} alt="Stop404" className="h-12 w-auto object-contain" />
               </div>
               <h3 className="text-xl font-heading font-bold mb-2">Software Services</h3>
               <p className="text-muted-foreground mb-4">Cutting-edge software solutions that keep your business running 24/7.</p>

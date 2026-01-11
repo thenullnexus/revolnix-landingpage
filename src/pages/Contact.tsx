@@ -63,7 +63,7 @@ const Contact = () => {
                 <div className="space-y-6">
                   {[
                     { icon: Mail, label: "Email", value: "hello@rovolnix.com", subtext: "We reply within 24 hours" },
-                    { icon: Phone, label: "Phone", value: "+91 XXX XXX XXXX", subtext: "Mon-Fri, 9am-6pm IST" },
+                    { icon: Phone, label: "Phone", value: "+91 93428 63441", subtext: "Mon-Fri, 9am-6pm IST" },
                     { icon: MapPin, label: "Location", value: "India", subtext: "Serving clients worldwide" },
                   ].map((item, index) => (
                     <div
@@ -169,13 +169,10 @@ const Contact = () => {
             <p className="text-gray-400 mb-6">
               We're excited to learn about your project and how we can help.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex justify-center">
               <Button variant="hero">
                 Schedule a Call
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-              <Button variant="hero-outline" className="border-white/30 text-white hover:bg-white/10">
-                View Our Work
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
           </div>

@@ -29,22 +29,20 @@ const VisionMissionSection = () => {
               </div>
               <h3 className="text-2xl font-heading font-bold mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be the leading force in technological innovation, transforming industries 
-                through revolutionary software solutions and pioneering fintech products that 
-                empower businesses and individuals to thrive in the digital age.
+                To establish Revolnix Technologies as the premier parent organization of market-dominating companies—revolutionizing industries worldwide through cutting-edge technology, uncompromising quality, and visionary support that redefines what's possible.
               </p>
               <ul className="mt-6 space-y-3">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Global technology leadership
+                  Industry Dominance
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Industry transformation
+                  Global Revolution
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Digital empowerment
+                  New Standards
                 </li>
               </ul>
             </div>
@@ -59,22 +57,20 @@ const VisionMissionSection = () => {
               </div>
               <h3 className="text-2xl font-heading font-bold mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To deliver exceptional technology solutions that solve real-world problems, 
-                foster innovation, and create lasting value for our clients. We are committed 
-                to excellence, integrity, and continuous advancement.
+                To deliver revolutionary software solutions and intelligent fintech platforms that empower businesses to achieve operational excellence, drive intelligent growth, and dominate their markets through unmatched quality and innovation.
               </p>
               <ul className="mt-6 space-y-3">
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Client-centric solutions
+                  Software Excellence
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Innovation-driven approach
+                  Fintech Intelligence
                 </li>
                 <li className="flex items-center gap-3 text-sm text-muted-foreground">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                  Excellence in delivery
+                  Market Leadership
                 </li>
               </ul>
             </div>

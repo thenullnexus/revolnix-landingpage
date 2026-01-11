@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logoRevolnix from "@/assets/logo-revolnix.jpeg";
-import { Linkedin, Twitter, Instagram, Github, Mail, MapPin, Phone } from "lucide-react";
+import { Linkedin, X, Instagram, Github, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   const navLinks = [
@@ -16,8 +16,8 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/revolnix-technologies/", label: "LinkedIn" },
+    { icon: X, href: "#", label: "X" },
     { icon: Instagram, href: "#", label: "Instagram" },
     { icon: Github, href: "#", label: "GitHub" },
   ];
@@ -95,8 +95,8 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-primary mt-1 flex-shrink-0" />
-                <a href="tel:+1234567890" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+919342863441" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  +91 93428 63441
                 </a>
               </li>
               <li className="flex items-start gap-3">

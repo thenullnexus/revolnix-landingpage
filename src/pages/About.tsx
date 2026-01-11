@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Lightbulb, Target, Rocket, Users, Award, Globe, Linkedin, Twitter, Mail, Quote } from "lucide-react";
+import { Lightbulb, Target, Rocket, Users, Award, Globe, Linkedin, X, Mail, Quote } from "lucide-react";
 
 // Replace these with your own images
-import aboutImage from "@/assets/hero-bg.jpg";
+import aboutImage from "@/assets/aboutus-img.png";
+import aboutBc from "@/assets/aboutus-bc.png";
 import founderImage from "@/assets/founder-placeholder.jpg";
 
 const About = () => {
@@ -12,13 +13,25 @@ const About = () => {
       <Navbar />
       
       {/* Hero section */}
-      <section className="pt-32 pb-16 bg-gradient-hero">
-        <div className="container mx-auto px-6">
+      <section className="relative pt-32 pb-16">
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <img 
+            src={aboutBc} 
+            alt="About Rovolnix" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
-              About <span className="text-gradient-primary">Rovolnix</span>
+            <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6 text-white">
+              About <span className="relative">
+                <span className="text-brand-purple">Rovol</span>
+                <span className="text-black">ni</span>
+                <span className="text-brand-purple">x</span>
+              </span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-white/90">
               An Unique Revolution in Technology
             </p>
           </div>
@@ -37,11 +50,6 @@ const About = () => {
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6">
-                <p className="text-sm text-muted-foreground italic">
-                  📷 Replace this image with your company photo
-                </p>
-              </div>
             </div>
 
             <div>
@@ -127,11 +135,11 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-              Meet the <span className="text-gradient-primary">Founder</span>
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-2">
+              Meet the <span className="text-brand-purple">Proprietor</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              The visionary behind Rovolnix Technologies
+              The driving force behind Rovolnix Technologies
             </p>
           </div>
 
@@ -143,22 +151,21 @@ const About = () => {
                   <div className="rounded-2xl overflow-hidden shadow-elevated">
                     <img 
                       src={founderImage} 
-                      alt="Founder - Replace with your photo" 
+                      alt="Proprietor - Muhammed Muthasir" 
                       className="w-full h-[500px] object-cover"
                     />
                   </div>
                   <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-4 py-2 rounded-lg shadow-lg">
-                    <p className="text-sm font-medium">Founder & CEO</p>
+                    <p className="text-sm font-medium">Proprietor & Business Finance Lead</p>
                   </div>
-                  <p className="mt-8 text-sm text-muted-foreground text-center italic">
-                    📷 Replace this with your photo
-                  </p>
                 </div>
 
                 {/* Social links */}
                 <div className="flex items-center justify-center gap-4 mt-8">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/muthasir/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -167,7 +174,7 @@ const About = () => {
                     href="#"
                     className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   >
-                    <Twitter className="w-5 h-5" />
+                    <X className="w-5 h-5" />
                   </a>
                   <a
                     href="#"
@@ -181,9 +188,9 @@ const About = () => {
               {/* Content column */}
               <div className="lg:col-span-3">
                 <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-2">
-                  [Your Name Here]
+                  Muhammed Muthasir
                 </h3>
-                <p className="text-primary font-medium text-lg mb-6">Proprietor & Founder</p>
+                <p className="text-primary font-medium text-lg mb-6">Proprietor & Business Finance Lead</p>
 
                 {/* Quote */}
                 <div className="bg-primary/5 border-l-4 border-primary p-6 rounded-r-xl mb-8">
@@ -196,8 +203,8 @@ const About = () => {
                 
                 <div className="space-y-6 text-muted-foreground leading-relaxed">
                   <p>
-                    As the founder and proprietor of Rovolnix Technologies, I am dedicated to building 
-                    a technology company that stands for excellence, innovation, and integrity. 
+                    As the proprietor and Chief Financial Officer of Rovolnix Technologies, I am dedicated to building 
+                    a technology company that stands for excellence, innovation, and financial integrity. 
                     With a passion for solving complex problems through elegant solutions, I lead 
                     our ventures with a vision to create lasting impact in the technology and fintech sectors.
                   </p>
@@ -214,7 +221,7 @@ const About = () => {
                   <div className="grid grid-cols-2 gap-4">
                     {[
                       "Technology Entrepreneur",
-                      "Software Architect",
+                      "Fintech Systems Architect",
                       "Fintech Innovator",
                       "Business Strategist",
                     ].map((item, index) => (
