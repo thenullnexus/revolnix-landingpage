@@ -2,18 +2,26 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Redirecting...</title>
+    <title>Redirecting to Revolnix</title>
     <script>
-      // Get the current path and remove any existing base path
-      const currentPath = window.location.pathname.replace(/^\/revolnix-landingpage/, '');
-      // Get the base path for GitHub Pages
-      const basePath = '/revolnix-landingpage';
-      // Redirect to the index.html with the correct base path
-      window.location.href = window.location.origin + basePath + '/index.html' + window.location.search;
+      // Check if we're on GitHub Pages
+      if (window.location.hostname === 'thenullnexus.github.io') {
+        const basePath = '/revolnix-landingpage';
+        const currentPath = window.location.pathname;
+        
+        // If we're not already at the correct path, redirect
+        if (!currentPath.startsWith(basePath + '/')) {
+          const newPath = basePath + 
+                         (currentPath.endsWith('.html') ? '' : '/') + 
+                         window.location.search + 
+                         window.location.hash;
+          window.location.href = newPath;
+        }
+      }
     </script>
-    <meta http-equiv="refresh" content="0; URL='https://thenullnexus.github.io/revolnix-landingpage/'">
+    <meta http-equiv="refresh" content="0; url=/">
   </head>
   <body>
-    <p>Redirecting to the application... <a href="https://thenullnexus.github.io/revolnix-landingpage/">Click here if not redirected</a></p>
+    <p>Redirecting to Revolnix... <a href="/">Click here if not redirected</a></p>
   </body>
 </html>
