@@ -4,13 +4,16 @@
     <meta charset="utf-8" />
     <title>Redirecting...</title>
     <script>
-      // Remove any existing base path
+      // Get the current path and remove any existing base path
       const currentPath = window.location.pathname.replace(/^\/revolnix-landingpage/, '');
-      // Redirect to the root with the path
-      window.location.href = window.location.origin + currentPath + window.location.search;
+      // Get the base path for GitHub Pages
+      const basePath = '/revolnix-landingpage';
+      // Redirect to the index.html with the correct base path
+      window.location.href = window.location.origin + basePath + '/index.html' + window.location.search;
     </script>
+    <meta http-equiv="refresh" content="0; URL='https://thenullnexus.github.io/revolnix-landingpage/'">
   </head>
   <body>
-    <p>Redirecting to the correct page...</p>
+    <p>Redirecting to the application... <a href="https://thenullnexus.github.io/revolnix-landingpage/">Click here if not redirected</a></p>
   </body>
 </html>
