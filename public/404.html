@@ -9,8 +9,8 @@
         const basePath = '/revolnix-landingpage';
         const currentPath = window.location.pathname;
         
-        // If we're not already at the correct path, redirect
-        if (!currentPath.startsWith(basePath + '/')) {
+        // If we're not at the root, redirect to the SPA
+        if (currentPath !== basePath + '/' && !currentPath.startsWith(basePath + '/')) {
           const newPath = basePath + 
                          (currentPath === '/' ? '' : currentPath) + 
                          window.location.search + 

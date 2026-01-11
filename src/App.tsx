@@ -15,7 +15,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 // Check if we're in GitHub Pages environment
-const isGitHubPages = window.location.hostname === 'thenullnexus.github.io';
+const isGitHubPages = import.meta.env.PROD && window.location.hostname === 'thenullnexus.github.io';
 const basePath = isGitHubPages ? '/revolnix-landingpage' : '';
 
 // Scroll to top on route change
@@ -33,12 +33,12 @@ const App = () => {
   // Handle GitHub Pages base path
   useEffect(() => {
     if (isGitHubPages) {
-      // If we're on GitHub Pages and not at the correct base path, redirect
-      if (!window.location.pathname.startsWith(basePath + '/')) {
+      const currentPath = window.location.pathname;
+      if (!currentPath.startsWith(basePath + '/') && currentPath !== basePath) {
         const newPath = basePath + 
-                       (window.location.pathname === '/' ? '' : window.location.pathname) + 
-                       window.location.search + 
-                       window.location.hash;
+                      (currentPath === '/' ? '' : currentPath) + 
+                      window.location.search + 
+                      window.location.hash;
         window.location.href = newPath;
       }
     }
@@ -49,7 +49,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={isGitHubPages ? basePath : '/'}>
+        <BrowserRouter basename={basePath}>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
@@ -58,7 +58,6 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
